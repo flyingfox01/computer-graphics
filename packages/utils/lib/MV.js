@@ -30,10 +30,8 @@ function vec2() {
   switch (result.length) {
     case 0:
       result.push(0.0);
-      break;
     case 1:
       result.push(0.0);
-      break;
   }
 
   return result.splice(0, 2);
@@ -45,13 +43,10 @@ function vec3() {
   switch (result.length) {
     case 0:
       result.push(0.0);
-      break;
     case 1:
       result.push(0.0);
-      break;
     case 2:
       result.push(0.0);
-      break;
   }
 
   return result.splice(0, 3);
@@ -63,16 +58,12 @@ function vec4() {
   switch (result.length) {
     case 0:
       result.push(0.0);
-      break;
     case 1:
       result.push(0.0);
-      break;
     case 2:
       result.push(0.0);
-      break;
     case 3:
       result.push(1.0);
-      break;
   }
 
   return result.splice(0, 4);
@@ -93,6 +84,7 @@ function mat2() {
     case 1:
       m = [vec2(v[0], 0.0), vec2(0.0, v[0])];
       break;
+
     default:
       m.push(vec2(v));
       v.splice(0, 2);
@@ -116,8 +108,8 @@ function mat3() {
       v[0] = 1;
     case 1:
       m = [vec3(v[0], 0.0, 0.0), vec3(0.0, v[0], 0.0), vec3(0.0, 0.0, v[0])];
-
       break;
+
     default:
       m.push(vec3(v));
       v.splice(0, 3);
