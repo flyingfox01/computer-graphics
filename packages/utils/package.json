@@ -1,0 +1,31 @@
+{
+  "name": "utils",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "flyingfox01 <zhang_tianxu@sina.com>",
+  "homepage": "https://github.com/flyingfox01/computer-graphics#readme",
+  "license": "ISC",
+  "main": "lib/utils.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flyingfox01/computer-graphics.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/utils.test.js",
+    "build:sit": "cross-env BABEL_ENV=rollup rollup -c ../../rollup.config.js",
+    "build": "cross-env NODE_ENV=production rollup -c ../../rollup.config.js"
+  },
+  "bugs": {
+    "url": "https://github.com/flyingfox01/computer-graphics/issues"
+  }
+}
