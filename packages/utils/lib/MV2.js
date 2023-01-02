@@ -8,7 +8,7 @@
 
 // printing
 
-function printm(m) {
+export function printm(m) {
   if (m.length == 2) for (var i = 0; i < m.length; i++) console.log(m[i][0], m[i][1]);
   else if (m.length == 3) for (var i = 0; i < m.length; i++) console.log(m[i][0], m[i][1], m[i][2]);
   else if (m.length == 4)
@@ -16,11 +16,11 @@ function printm(m) {
 }
 // determinants
 
-function det2(m) {
+export function det2(m) {
   return m[0][0] * m[1][1] - m[0][1] * m[1][0];
 }
 
-function det3(m) {
+export function det3(m) {
   var d =
     m[0][0] * m[1][1] * m[2][2] +
     m[0][1] * m[1][2] * m[2][0] +
@@ -31,7 +31,7 @@ function det3(m) {
   return d;
 }
 
-function det4(m) {
+export function det4(m) {
   var m0 = [
     vec3(m[1][1], m[1][2], m[1][3]),
     vec3(m[2][1], m[2][2], m[2][3]),
@@ -55,7 +55,7 @@ function det4(m) {
   return m[0][0] * det3(m0) - m[0][1] * det3(m1) + m[0][2] * det3(m2) - m[0][3] * det3(m3);
 }
 
-function det(m) {
+export function det(m) {
   if (m.matrix != true) console.log('not a matrix');
   if (m.length == 2) return det2(m);
   if (m.length == 3) return det3(m);
@@ -66,7 +66,7 @@ function det(m) {
 
 // inverses
 
-function inverse2(m) {
+export function inverse2(m) {
   var a = mat2();
   var d = det2(m);
   a[0][0] = m[1][1] / d;
@@ -77,7 +77,7 @@ function inverse2(m) {
   return a;
 }
 
-function inverse3(m) {
+export function inverse3(m) {
   var a = mat3();
   var d = det3(m);
 
@@ -104,7 +104,7 @@ function inverse3(m) {
   return a;
 }
 
-function inverse4(m) {
+export function inverse4(m) {
   var a = mat4();
   var d = det4(m);
 
@@ -209,14 +209,14 @@ function inverse4(m) {
 
   return a;
 }
-function inverse(m) {
+export function inverse(m) {
   if (m.matrix != true) console.log('not a matrix');
   if (m.length == 2) return inverse2(m);
   if (m.length == 3) return inverse3(m);
   if (m.length == 4) return inverse4(m);
 }
 
-function normalMatrix(m, flag) {
+export function normalMatrix(m, flag) {
   var a = mat4();
   a = inverse(transpose(m));
   if (flag != true) return a;

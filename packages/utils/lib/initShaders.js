@@ -61,3 +61,5 @@ function initShaders(gl, vertexShaderId, fragmentShaderId) {
 
   return program;
 }
+
+export default initShaders;

@@ -56,7 +56,7 @@
  * visible.
  */
 
-WebGLUtils = (function () {
+const WebGLUtils = (function () {
   /**
    * Creates the HTLM for a failure message
    * @param {string} canvasContainerId id of container of th
@@ -166,3 +166,5 @@ window.requestAnimFrame = (function () {
     }
   );
 })();
+
+export default WebGLUtils;

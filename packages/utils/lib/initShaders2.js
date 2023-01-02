@@ -38,3 +38,5 @@ function initShaders(gl, vShaderName, fShaderName) {
 
   return program;
 }
+
+export default initShaders;
