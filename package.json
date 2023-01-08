@@ -24,7 +24,6 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "type": "module",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -62,6 +61,7 @@
     "@storybook/addon-interactions": "^6.5.15",
     "@storybook/addon-links": "^6.5.15",
     "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/client-api": "^6.5.15",
     "@storybook/manager-webpack5": "^6.5.15",
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/preset-scss": "^1.0.3",

@@ -5,13 +5,13 @@
   "author": "flyingfox01 <zhang_tianxu@sina.com>",
   "homepage": "https://github.com/flyingfox01/computer-graphics#readme",
   "license": "ISC",
-  "main": "lib/sierpinski.js",
+  "main": "src/sierpinski.js",
   "directories": {
-    "lib": "lib",
+    "src": "src",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "src"
   ],
   "publishConfig": {
     "registry": "https://registry.npmmirror.com/"
