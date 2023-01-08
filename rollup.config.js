@@ -33,7 +33,7 @@ import dts from 'rollup-plugin-dts';
 // 引入package
 // import pkg from "./package.json";
 // 对glsl的支持
-import glslify from 'rollup-plugin-glslify';
+import glsl from 'rollup-plugin-glsl';
 
 const env = process.env.NODE_ENV;
 const PACKAGE_ROOT_PATH = process.cwd();
@@ -108,13 +108,15 @@ const config = [
         },
       }),
       json(),
+      // glsl支持
+      glsl({
+        include: '**/*.glsl',
+      }),
       // 全局替换NODE_ENV，exclude表示不包含某些文件夹下的文件
       replace({
         // exclude: 'node_modules/**',
         'process.env.NODE_ENV': JSON.stringify(env || 'development'),
       }),
-      // glsl支持
-      glslify(),
       // 生产环境执行terser压缩代码
       env === 'production' && terser(),
     ],

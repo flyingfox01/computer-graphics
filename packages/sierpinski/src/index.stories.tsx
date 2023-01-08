@@ -5,7 +5,7 @@ import Sierpinski from './index';
 const Component = () => {
   return (
     <div>
-      sierpinski test
+      谢尔平斯基三角
       <Sierpinski />
     </div>
   );
@@ -19,18 +19,10 @@ export default {
 //storybook 定义的一种args写法，可以在界面生成配置界面
 const Template: ComponentStory<typeof Component> = (args: any) => <Component {...args} />;
 
-//示例一
-export const defaultButton = Template.bind({});
-defaultButton.args = {
-  bgcolor: '#f0f0f0',
-  color: '#000000',
-  btnname: '按钮',
-};
-
-//示例二
-export const BlackButton = Template.bind({});
-BlackButton.args = {
+// 示例
+export const Sierpinski2d = Template.bind({});
+Sierpinski2d.args = {
   bgcolor: '#333333',
   color: '#ffffff',
-  btnname: '按钮',
+  btnname: '谢尔平斯基三角',
 };
