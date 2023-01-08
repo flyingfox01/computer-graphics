@@ -9,27 +9,28 @@
 //  Helper export functions
 //
 
-export function _argumentsToArray(args) {
+export function _argumentsToArray(args: IArguments): number[] {
   return [].concat.apply([], Array.prototype.slice.apply(args));
 }
 
 //----------------------------------------------------------------------------
 
-export function radians(degrees) {
+export function radians(degrees: number): number {
   return (degrees * Math.PI) / 180.0;
 }
 
 //----------------------------------------------------------------------------
 //
-//  Vector Constructors
+//  初始化向量
 //
 
-export function vec2() {
+export function vec2(): number[] {
   var result = _argumentsToArray(arguments);
 
   switch (result.length) {
     case 0:
       result.push(0.0);
+      break;
     case 1:
       result.push(0.0);
   }
@@ -37,14 +38,16 @@ export function vec2() {
   return result.splice(0, 2);
 }
 
-export function vec3() {
+export function vec3(): number[] {
   var result = _argumentsToArray(arguments);
 
   switch (result.length) {
     case 0:
       result.push(0.0);
+      break;
     case 1:
       result.push(0.0);
+      break;
     case 2:
       result.push(0.0);
   }
@@ -52,16 +55,19 @@ export function vec3() {
   return result.splice(0, 3);
 }
 
-export function vec4() {
+export function vec4(): number[] {
   var result = _argumentsToArray(arguments);
 
   switch (result.length) {
     case 0:
       result.push(0.0);
+      break;
     case 1:
       result.push(0.0);
+      break;
     case 2:
       result.push(0.0);
+      break;
     case 3:
       result.push(1.0);
   }
@@ -71,7 +77,7 @@ export function vec4() {
 
 //----------------------------------------------------------------------------
 //
-//  Matrix Constructors
+//  矩阵构造器
 //
 
 export function mat2() {
