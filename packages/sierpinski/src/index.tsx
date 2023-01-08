@@ -28,6 +28,9 @@ const render3d = (canvas?: any) => {
     // 转至(2)
   }
 
+  // 加上原始的三个点
+  points.push(...vertices);
+
   // 配置 WebGL
   // 用来设置视口，即指定从标准设备到窗口坐标的 x、y 仿射变换。 https://developer.mozilla.org/zh-CN/docs/Web/API/WebGLRenderingContext/viewport
   context.viewport(0, 0, canvas.width, canvas.height);
