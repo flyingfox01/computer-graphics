@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/flyingfox01/computer-graphics/issues"
   },
-  "gitHead": "b1c7a7a626e8664c1ba473b35b0139bcd35e59de"
+  "gitHead": "b1c7a7a626e8664c1ba473b35b0139bcd35e59de",
+  "dependencies": {
+    "utils": "^1.0.1-alpha.0"
+  }
 }

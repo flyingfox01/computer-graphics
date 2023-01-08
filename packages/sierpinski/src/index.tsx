@@ -1,5 +1,7 @@
+import React from 'react';
+
 function sierpinski() {
-    return "Hello from sierpinski";
+  return <div>'Hello from sierpinski'</div>;
 }
 
-export default sierpinski
+export default sierpinski;

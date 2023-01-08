@@ -1,8 +1,14 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import Sierpinski from './index';
 
 const Component = () => {
-  return <div>sierpinski test</div>;
+  return (
+    <div>
+      sierpinski test
+      <Sierpinski />
+    </div>
+  );
 };
 
 export default {
